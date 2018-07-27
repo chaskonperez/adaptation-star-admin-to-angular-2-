@@ -1,0 +1,66 @@
+.container-scroller.loading .navbar-brand.brand-logo .navbar-brand-logo img,
+.container-scroller.loading .nav-link .badge,
+.container-scroller.loading .nav-link i,
+.container-scroller.loading .nav-item.dropdown .nav-link .count,
+.container-scroller.loading .nav-link .profile-image img,
+.container-scroller.loading .nav-link.dropdown-toggle:after,
+.container-scroller.loading .nav-link .status-indicator {
+	display: none;
+}
+.container-scroller.loading .navbar-brand.brand-logo {
+	pointer-events: none;
+}
+.container-scroller.loading .navbar-brand.brand-logo .navbar-brand-logo {
+	background: #f2f8f9;
+	height: 28px;
+	margin: auto;
+	width: calc(255px - 130px);
+	border-radius: 0.1875rem;
+}
+.container-scroller.loading .navbar-brand.brand-logo .navbar-brand-logo img {
+	display: none;
+}
+
+.container-scroller.loading .nav-link {
+	pointer-events: none;
+}
+.container-scroller.loading .nav-link span {
+	background: #f2f8f9;
+	color: #f2f8f9;
+	height: 20px;
+	border-radius: 0.1875rem;
+}
+.container-scroller.loading .nav-item.dropdown .nav-link .mdi {
+	display: initial;
+	background: #f2f8f9;
+	color: #f2f8f9;
+	border-radius: 0.1875rem;
+}
+.container-scroller.loading .nav-link .profile-image {
+	display: inline-block;
+    background: #f2f8f9;
+    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+}
+.container-scroller.loading .nav-link .profile-name {
+    background: #f2f8f9;
+    color: #f2f8f9;
+    border-radius: 0.1875rem;
+    width: 120px;
+    height: 12px;
+}
+.container-scroller.loading .nav-link .designation {
+    background: #f2f8f9;
+    color: #f2f8f9 !important;
+    border-radius: 0.1875rem;
+    width: 70px;
+    height: 20px;
+    display: inline-block;
+}
+.container-scroller.loading .nav-link .btn {
+	background: #f2f8f9;
+    color: #f2f8f9;
+    border: #f2f8f9;
+    pointer-events: none;
+}
