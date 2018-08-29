@@ -61,6 +61,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 @import '~mdi/css/materialdesignicons.min.css';
 @import '~font-awesome/css/font-awesome.css';
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
 @-moz-keyframes flash {
   0% {
     opacity: 1; }
@@ -14112,6 +14113,33 @@ input:focus {
     transition: all 0.25s ease-out; }
     .sidebar-offcanvas.active {
       right: 0; } }
+
+@media screen and (min-width: 992px) {
+  .sidebar-hidden .sidebar {
+    transition: width 0.25s ease;
+    -webkit-transition: width 0.25s ease;
+    -moz-transition: width 0.25s ease;
+    -ms-transition: width 0.25s ease;
+    width: 0;
+  }
+  .sidebar-hidden .main-panel {
+    width: 100%;
+    margin-left: 0px !important;
+  }
+
+  .sidebar-fixed .sidebar {
+    position: fixed;
+    max-height: auto;
+  }
+  .sidebar-fixed .sidebar .nav {
+    max-height: calc(100vh - 63px);
+    overflow: auto;
+    position: relative;
+  }
+  .sidebar-fixed .main-panel {
+    margin-left: 255px;
+  }
+}
 
 /* Navbar */
 .navbar.default-layout {

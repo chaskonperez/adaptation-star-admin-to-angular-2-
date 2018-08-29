@@ -4,10 +4,13 @@
 .container-scroller.loading .nav-item.dropdown .nav-link .count,
 .container-scroller.loading .nav-link .profile-image img,
 .container-scroller.loading .nav-link.dropdown-toggle:after,
-.container-scroller.loading .nav-link .status-indicator {
+.container-scroller.loading .nav-link .status-indicator,
+.container-scroller.loading .navbar-brand.brand-logo .navbar-brand-logo img {
 	display: none;
 }
-.container-scroller.loading .navbar-brand.brand-logo {
+.container-scroller.loading .navbar-brand.brand-logo,
+.container-scroller.loading .navbar-toggler,
+.container-scroller.loading .nav-link {
 	pointer-events: none;
 }
 .container-scroller.loading .navbar-brand.brand-logo .navbar-brand-logo {
@@ -17,20 +20,14 @@
 	width: calc(255px - 130px);
 	border-radius: 0.1875rem;
 }
-.container-scroller.loading .navbar-brand.brand-logo .navbar-brand-logo img {
-	display: none;
-}
-
-.container-scroller.loading .nav-link {
-	pointer-events: none;
-}
 .container-scroller.loading .nav-link span {
 	background: #f2f8f9;
 	color: #f2f8f9;
 	height: 20px;
 	border-radius: 0.1875rem;
 }
-.container-scroller.loading .nav-item.dropdown .nav-link .mdi {
+.container-scroller.loading .nav-item.dropdown .nav-link .mdi,
+.container-scroller.loading .navbar-toggler .mdi {
 	display: initial;
 	background: #f2f8f9;
 	color: #f2f8f9;

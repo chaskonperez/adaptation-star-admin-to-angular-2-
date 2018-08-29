@@ -1,0 +1,12 @@
+<div #select class="select">
+	<span class="select-placeholder" *ngIf="!names.length">{{ placeholder }}</span>
+	<span class="selected-options" *ngIf="names.length">{{ names.join(', ') }}</span>
+	<input type="hidden" id="input" name="input" [(ngModel)]="value" #input="ngModel" (blur)="onBlur()">
+</div>
+<ul #selectOptions class="select-options" [ngClass]="{'open': isOpenOptions}">
+	<li class="select-search">
+		<input type="text" id="search" name="search" [(ngModel)]="filter" #search="ngModel" placeholder="{{ placeholderSearch }}">
+		<span (click)="cleanFilter()">X</span>
+	</li>
+	<li class="select-option" *ngFor="let option of filterOptions()" (click)="selectOption(option)" [ngClass]="{'selected': option.selected}">{{ option.name }}</li>
+</ul>

@@ -69,6 +69,14 @@ export class AdminComponent implements OnInit {
 					path: '/sample-pages/register'
 				},
 				{
+					name: 'Login 2',
+					path: '/sample-pages/login2'
+				},
+				{
+					name: 'Register 2',
+					path: '/sample-pages/register2'
+				},
+				{
 					name: '404',
 					path: '/sample-pages/not-found'
 				},
@@ -77,7 +85,12 @@ export class AdminComponent implements OnInit {
 					path: '/sample-pages/internal-server'
 				},
 			]
-		}
+		},
+		{
+			name: 'Custom Components',
+			path: '/custom-components',
+			icon: 'mdi mdi-lightbulb-outline'
+		},
 	];
 
   	constructor() { }

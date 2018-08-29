@@ -1,4 +1,4 @@
-<div class="container-scroller" [ngClass]="{'loading': loading}">
+<div class="container-scroller sidebar-fixed" [ngClass]="{'loading': loading, 'sidebar-hidden': hidden}">
 	<!-- partial:partials/_navbar.html -->
 	<nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
 	  <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
@@ -12,6 +12,9 @@
 	    </a>
 	  </div>
 	  <div class="navbar-menu-wrapper d-flex align-items-center">
+	  	<button class="navbar-toggler align-self-center" type="button" (click)="hidden = !hidden">
+          <span class="mdi mdi-menu"></span>
+        </button>
 	    <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
 	      <li class="nav-item">
 	        <a href="#" class="nav-link">
@@ -179,16 +182,16 @@
 	        </div>
 	      </li>
 	    </ul>
-	    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-	      <span class="icon-menu"></span>
+	    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" (click)="offcanvas = !offcanvas">
+	      <span class="mdi mdi-menu"></span>
 	    </button>
 	  </div>
 	</nav>
 	<!-- partial -->
 	<div class="container-fluid page-body-wrapper">
 	  <!-- partial:partials/_sidebar.html -->
-	  <nav class="sidebar sidebar-offcanvas" id="sidebar">
-	    <ul class="nav">
+	  <nav class="sidebar sidebar-offcanvas" id="sidebar" [ngClass]="{'active': offcanvas}">
+	    <ul class="nav ps" perfectScrollbar>
 	      <li class="nav-item nav-profile">
 	        <div class="nav-link">
 	          <div class="user-wrapper">
