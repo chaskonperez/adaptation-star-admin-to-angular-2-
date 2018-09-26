@@ -1,7 +1,7 @@
 <div #select class="select">
 	<span class="select-placeholder" *ngIf="!names.length">{{ placeholder }}</span>
 	<span class="selected-options" *ngIf="names.length">{{ names.join(', ') }}</span>
-	<input type="hidden" id="input" name="input" [(ngModel)]="value" #input="ngModel" (blur)="onBlur()">
+	<input type="hidden" id="input" name="input" [(ngModel)]="value" #input="ngModel">
 </div>
 <ul #selectOptions class="select-options" [ngClass]="{'open': isOpenOptions}">
 	<li class="select-search">
@@ -9,4 +9,5 @@
 		<span (click)="cleanFilter()">X</span>
 	</li>
 	<li class="select-option" *ngFor="let option of filterOptions()" (click)="selectOption(option)" [ngClass]="{'selected': option.selected}">{{ option.name }}</li>
+	<li class="select-option select-option-disabled" *ngIf="filter && !filterOptions().length">{{ noResultsFoundText }}</li>
 </ul>

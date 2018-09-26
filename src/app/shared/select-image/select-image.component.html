@@ -1,0 +1,16 @@
+<div class="select-image-container">
+	<div class="select-image">
+		<div class="select-image-remove" *ngIf="src" (click)="removeImage()">
+			<span class="fa fa-remove"></span>
+		</div>
+		<label>
+			<div class="select-image-icon">
+				<span class="fa fa-image"></span>
+			</div>
+			
+			<img [src]="src" *ngIf="src">
+
+			<input type="file" id="input" name="input" [(ngModel)]="value" #input="ngModel" (change)="selectImage($event)">
+		</label>
+	</div>
+</div>

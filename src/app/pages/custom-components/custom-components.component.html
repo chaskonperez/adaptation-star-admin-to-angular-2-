@@ -9,14 +9,33 @@
 	          <app-multiple-select 
 	          	[options]="selectOptions" 
 	          	[placeholder]="'Select options...'" 
-	          	id="input" 
-	          	name="input" 
-	          	[(ngModel)]="value" 
-	          	#input="ngModel" 
+	          	id="multiple" 
+	          	name="multiple" 
+	          	[(ngModel)]="custom.multiple" 
+	          	#multiple="ngModel" 
 	          	required>
 	          </app-multiple-select>
           </div>
-          <code>Selected values: {{ value }}</code>
+          <code>Selected values: {{ custom.multiple }}</code>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 d-flex align-items-stretch grid-margin">
+    <div class="card col">
+      <div class="card-body">
+        <h4 class="card-title">Select image</h4>
+        <form class="forms-sample">
+          <div class="form-group">
+            <app-select-image 
+            	id="image" 
+	          	name="image" 
+	          	[(ngModel)]="custom.image" 
+	          	#image="ngModel">	
+            </app-select-image>
+          </div>
+          <code>Selected value: {{ custom.image }}</code>
         </form>
       </div>
     </div>

@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custom-components.component.css']
 })
 export class CustomComponentsComponent implements OnInit {
+	public custom: any = {};
+	
 	public selectOptions: any = [
 		{value: 1, name: 'option 1'},
 		{value: 2, name: 'option 2'},

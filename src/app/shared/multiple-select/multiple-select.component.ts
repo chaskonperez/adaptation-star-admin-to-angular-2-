@@ -34,6 +34,7 @@ export class MultipleSelectComponent implements ControlValueAccessor {
   @Input() options: any = [];
   @Input() placeholder: string = 'Select...';
   @Input() placeholderSearch: string = 'Search...';
+  @Input() noResultsFoundText: string = 'No results found';
 
 	public isOpenOptions: boolean = false;
 	public selectedOptions: any = [];
@@ -57,11 +58,6 @@ export class MultipleSelectComponent implements ControlValueAccessor {
       this.innerValue = v;
       this.onChangeCallback(v);
     }
-  }
-
-  //Set touched on blur
-  onBlur() {
-    this.onTouchedCallback();
   }
 
   //From ControlValueAccessor interface
@@ -108,7 +104,7 @@ export class MultipleSelectComponent implements ControlValueAccessor {
   handleClick(event) {
     if (
     	this.isOpenOptions &&
-    	event.target != this.selectView.nativeElement && 
+    	event.target != this.selectView.nativeElement &&
     	event.target.parentElement != this.selectOptionsView.nativeElement &&
     	event.target.parentElement.className != 'select-search'
     ) {
