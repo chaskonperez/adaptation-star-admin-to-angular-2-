@@ -33,6 +33,7 @@ import { LoaderComponent } from './shared/loader/loader.component';
 import { MultipleSelectComponent } from './shared/multiple-select/multiple-select.component';
 import { CustomComponentsComponent } from './pages/custom-components/custom-components.component';
 import { SelectImageComponent } from './shared/select-image/select-image.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -156,7 +157,8 @@ export const appRoutes: Routes = [
     Auth2Component,
     MultipleSelectComponent,
     CustomComponentsComponent,
-    SelectImageComponent
+    SelectImageComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

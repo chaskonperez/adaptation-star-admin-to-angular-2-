@@ -1,0 +1,18 @@
+.sidebar-container {
+	position: fixed;
+    height: 100%;
+    top: 0;
+    background: #fff;
+    z-index: 10000;
+    transition: width 0.7s;
+    width: 0px;
+    -webkit-transition: width 0.7s;
+    -moz-transition: width 0.7s;
+    -ms-transition: width 0.7s;
+}
+.sidebar-container.left {
+	left: 0;
+}
+.sidebar-container.right {
+	right: 0;
+}

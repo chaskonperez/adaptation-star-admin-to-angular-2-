@@ -73,7 +73,9 @@ export class SelectImageComponent implements ControlValueAccessor {
 	    }
 
 	    reader.readAsDataURL(file);
-		}
+		} else {
+      this.removeImage();
+    }
 	}
 
 	removeImage() {

@@ -41,3 +41,17 @@
     </div>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-md-6 d-flex align-items-stretch grid-margin">
+    <div class="card col">
+      <div class="card-body">
+        <h4 class="card-title">Sidebar</h4>
+        <button type="button" class="btn btn-primary" (click)="sidebar = !sidebar">Toggle sidebar</button>
+        <app-sidebar [open]="sidebar" [width]="500" [position]="'right'">
+          <p class="p-3">Sidebar works!</p>
+        </app-sidebar>
+      </div>
+    </div>
+  </div>
+</div>
